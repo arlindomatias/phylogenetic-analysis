@@ -1,0 +1,9 @@
+# Marker gene selection by homology: DIAMOND blastp + pure-Python parsing
+name: markers
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - diamond=2.1
+  - pyyaml=6

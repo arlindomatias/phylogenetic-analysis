@@ -1,0 +1,273 @@
+# Phylogenetic taxonomy of Orthoherpesviridae from NCBI RefSeq genomes.
+# Final target: reports/report.html.
+#   snakemake --cores 6                 # with locally installed tools
+#   snakemake --cores 6 --use-conda     # with the environments in env/
+# Run from the project root (viral_phylogeny/). Parameters: config/config.yaml.
+#
+# download -> metadata
+#          -> queries -> homology -> orthologs -> align (per marker) -> concat -> tree
+#                                                                            -> taxonomy -> plots -> report
+
+configfile: "config/config.yaml"
+
+NCBI = config["ncbi_dir"]
+DATA = config["data_dir"]
+RESULTS = config["results_dir"]
+PLOTS = config["plots_dir"]
+REPORTS = config["reports_dir"]
+
+MARKERS = sorted(config["markers"])
+TREE_PREFIX = f"{RESULTS}/tree/herpesviridae"
+FIGURES = ["tree_subfamily", "marker_coverage", "genome_size_by_subfamily"]
+TABLES = ["taxa_metadata", "marker_coverage", "marker_presence", "annotation_check",
+          "supermatrix_stats", "monophyly_subfamily", "monophyly_genus", "human_herpesviruses"]
+
+
+rule all:
+    input:
+        f"{REPORTS}/report.html",
+
+
+rule download:
+    """RefSeq genomes + proteomes of the family from NCBI Virus."""
+    output:
+        faa=f"{NCBI}/protein.faa",
+        fna=f"{NCBI}/genomic.fna",
+        report=f"{NCBI}/data_report.jsonl",
+    params:
+        taxon=config["download"]["taxon"],
+        include=config["download"]["include"],
+        refseq=str(config["download"]["refseq_only"]).lower(),
+        out_dir=NCBI,
+    log:
+        "logs/download.log",
+    conda:
+        "env/download.yaml"
+    shell:
+        "bash scripts/download.sh {params.taxon:q} {params.include} {params.refseq} "
+        "{params.out_dir} > {log} 2>&1"
+
+
+rule metadata:
+    """Genome table with the ICTV ranks (subfamily, genus, species) of every virus."""
+    input:
+        report=f"{NCBI}/data_report.jsonl",
+        script="scripts/metadata.py",
+        lib="scripts/vphylo.py",
+    output:
+        f"{RESULTS}/taxa_metadata.csv",
+    log:
+        "logs/metadata.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "python scripts/metadata.py {input.report} {output} > {log} 2>&1"
+
+
+rule queries:
+    """HSV-1 core proteins used as homology queries for the marker genes."""
+    input:
+        faa=f"{NCBI}/protein.faa",
+        config="config/config.yaml",
+        script="scripts/extract_queries.py",
+        lib="scripts/vphylo.py",
+    output:
+        f"{DATA}/markers/queries.faa",
+    log:
+        "logs/queries.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "python scripts/extract_queries.py {input.config} {input.faa} {output} > {log} 2>&1"
+
+
+rule annotation_check:
+    """How many viruses annotate each marker under the HSV-1 product name (motivates homology)."""
+    input:
+        faa=f"{NCBI}/protein.faa",
+        config="config/config.yaml",
+        script="scripts/annotation_check.py",
+        lib="scripts/vphylo.py",
+    output:
+        f"{RESULTS}/annotation_check.csv",
+    log:
+        "logs/annotation_check.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "python scripts/annotation_check.py {input.config} {input.faa} {output} > {log} 2>&1"
+
+
+rule homology:
+    """DIAMOND blastp of the queries against every protein of the family."""
+    input:
+        queries=f"{DATA}/markers/queries.faa",
+        faa=f"{NCBI}/protein.faa",
+        script="scripts/homology.sh",
+    output:
+        f"{RESULTS}/diamond_hits.tsv",
+    params:
+        evalue=config["homology"]["evalue"],
+        sensitivity=config["homology"]["sensitivity"],
+    log:
+        "logs/homology.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "bash scripts/homology.sh {input.queries} {input.faa} {output} "
+        "{params.evalue} {params.sensitivity} > {log} 2>&1"
+
+
+rule orthologs:
+    """Best hit per marker per virus -> one unaligned orthologue set per marker."""
+    input:
+        faa=f"{NCBI}/protein.faa",
+        hits=f"{RESULTS}/diamond_hits.tsv",
+        config="config/config.yaml",
+        script="scripts/select_orthologs.py",
+        lib="scripts/vphylo.py",
+    output:
+        fastas=expand(f"{DATA}/markers/{{marker}}.faa", marker=MARKERS),
+        coverage=f"{RESULTS}/marker_coverage.csv",
+        presence=f"{RESULTS}/marker_presence.csv",
+    params:
+        out_dir=f"{DATA}/markers",
+    log:
+        "logs/orthologs.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "python scripts/select_orthologs.py {input.config} {input.faa} {input.hits} "
+        "{params.out_dir} {output.coverage} {output.presence} > {log} 2>&1"
+
+
+rule align:
+    """MAFFT alignment + trimAl column trimming, one marker at a time."""
+    input:
+        faa=f"{DATA}/markers/{{marker}}.faa",
+        script="scripts/align.sh",
+    output:
+        aln=f"{DATA}/aligned/{{marker}}.aln.faa",
+        trimmed=f"{DATA}/trimmed/{{marker}}.trim.faa",
+    params:
+        gap_threshold=config["alignment"]["gap_threshold"],
+    threads: 2
+    log:
+        "logs/align_{marker}.log",
+    conda:
+        "env/align.yaml"
+    shell:
+        "bash scripts/align.sh {input.faa} {output.aln} {output.trimmed} "
+        "{params.gap_threshold} {threads} > {log} 2>&1"
+
+
+rule concat:
+    """Partitioned supermatrix from the trimmed marker alignments."""
+    input:
+        trimmed=expand(f"{DATA}/trimmed/{{marker}}.trim.faa", marker=MARKERS),
+        config="config/config.yaml",
+        script="scripts/concat.py",
+        lib="scripts/vphylo.py",
+    output:
+        matrix=f"{DATA}/supermatrix.fasta",
+        partitions=f"{DATA}/partitions.nex",
+        stats=f"{RESULTS}/supermatrix_stats.csv",
+    log:
+        "logs/concat.log",
+    conda:
+        "env/markers.yaml"
+    shell:
+        "python scripts/concat.py {input.config} {output.matrix} {output.partitions} "
+        "{output.stats} {input.trimmed} > {log} 2>&1"
+
+
+rule tree:
+    """Maximum likelihood tree, one model per marker partition, UFBoot + SH-aLRT support."""
+    input:
+        matrix=f"{DATA}/supermatrix.fasta",
+        partitions=f"{DATA}/partitions.nex",
+    output:
+        treefile=f"{TREE_PREFIX}.treefile",
+        contree=f"{TREE_PREFIX}.contree",
+        iqtree=f"{TREE_PREFIX}.iqtree",
+    params:
+        prefix=TREE_PREFIX,
+        ufboot=config["tree"]["ufboot"],
+        alrt=config["tree"]["alrt"],
+        seed=config["seed"],
+    threads: config["tree"]["threads"]
+    log:
+        "logs/tree.log",
+    conda:
+        "env/tree.yaml"
+    shell:
+        "iqtree2 -s {input.matrix} -p {input.partitions} --prefix {params.prefix} "
+        "-B {params.ufboot} --alrt {params.alrt} -T {threads} --seed {params.seed} "
+        "--quiet -redo > {log} 2>&1"
+
+
+rule taxonomy:
+    """Test every ICTV subfamily and genus for monophyly on the ML tree."""
+    input:
+        treefile=f"{TREE_PREFIX}.treefile",
+        metadata=f"{RESULTS}/taxa_metadata.csv",
+        config="config/config.yaml",
+        script="scripts/taxonomy_check.py",
+        lib="scripts/vphylo.py",
+    output:
+        subfamily=f"{RESULTS}/monophyly_subfamily.csv",
+        genus=f"{RESULTS}/monophyly_genus.csv",
+        humans=f"{RESULTS}/human_herpesviruses.csv",
+        rooted=f"{RESULTS}/tree/herpesviridae.rooted.nwk",
+        summary=f"{RESULTS}/taxonomy_summary.csv",
+    log:
+        "logs/taxonomy.log",
+    conda:
+        "env/report.yaml"
+    shell:
+        "python scripts/taxonomy_check.py {input.config} {input.treefile} {input.metadata} "
+        "{output.subfamily} {output.genus} {output.humans} {output.rooted} {output.summary} "
+        "> {log} 2>&1"
+
+
+rule plots:
+    """Annotated tree figure plus marker coverage and genome size panels."""
+    input:
+        rooted=f"{RESULTS}/tree/herpesviridae.rooted.nwk",
+        metadata=f"{RESULTS}/taxa_metadata.csv",
+        coverage=f"{RESULTS}/marker_coverage.csv",
+        config="config/config.yaml",
+        script="scripts/plot_tree.py",
+        lib="scripts/vphylo.py",
+    output:
+        expand(f"{PLOTS}/{{fig}}.{{ext}}", fig=FIGURES, ext=["png", "pdf"]),
+    params:
+        plots_dir=PLOTS,
+    log:
+        "logs/plots.log",
+    conda:
+        "env/report.yaml"
+    shell:
+        "python scripts/plot_tree.py {input.config} {input.rooted} {input.metadata} "
+        "{input.coverage} {params.plots_dir} > {log} 2>&1"
+
+
+rule report:
+    """Self-contained HTML report from results/ and plots/."""
+    input:
+        tables=expand(f"{RESULTS}/{{t}}.csv", t=TABLES),
+        figures=expand(f"{PLOTS}/{{fig}}.png", fig=FIGURES),
+        summary=f"{RESULTS}/taxonomy_summary.csv",
+        iqtree=f"{TREE_PREFIX}.iqtree",
+        config="config/config.yaml",
+        script="scripts/report.py",
+        helper="scripts/html_report.py",
+    output:
+        html=f"{REPORTS}/report.html",
+        versions=f"{REPORTS}/versions.txt",
+    log:
+        "logs/report.log",
+    conda:
+        "env/report.yaml"
+    shell:
+        "python scripts/report.py {input.config} {output.html} {output.versions} > {log} 2>&1"

@@ -1,0 +1,14 @@
+# Tree annotation, figures and HTML report (Python only)
+name: report
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - pandas=2.3
+  - numpy=2.3
+  - matplotlib-base=3.10
+  - markdown=3.9
+  - biopython=1.85
+  - dendropy=5.0
+  - pyyaml=6

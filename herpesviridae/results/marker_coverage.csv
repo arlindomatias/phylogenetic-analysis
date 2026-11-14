@@ -1,0 +1,9 @@
+marker,query,n_taxa,pct_taxa,min_length,median_length,max_length,median_identity_to_query,min_identity_to_query
+UL15_terminase1,YP_009137089.1,93,80.2,374,690,801,48.1,32.6
+UL19_capsid,YP_009137093.1,107,92.2,1002,1377,1413,28.9,23.8
+UL27_gB,YP_009137102.1,114,98.3,739,875,1034,29.1,25.3
+UL28_terminase2,YP_009137103.1,108,93.1,651,764,893,26.6,20.1
+UL29_ssDNA_binding,YP_009137104.1,102,87.9,952,1187,1295,26.1,20.0
+UL30_polymerase,YP_009137105.1,110,94.8,801,1081,1357,35.6,27.5
+UL52_primase,YP_009137128.1,95,81.9,828,970,1293,27.5,20.0
+UL5_helicase,YP_009137079.1,108,93.1,776,855,969,34.4,28.9

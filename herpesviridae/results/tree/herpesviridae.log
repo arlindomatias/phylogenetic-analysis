@@ -1,0 +1,249 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Dec 11 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    arlindo-B450M-GAMING (AVX2, FMA3, 15 GB RAM)
+Command: iqtree2 -s data/supermatrix.fasta -p data/partitions.nex --prefix results/tree/herpesviridae -B 1000 --alrt 1000 -T 6 --seed 42 --quiet -redo
+Seed:    42 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Nov 14 16:52:42 2026
+Kernel:  AVX+FMA - 6 threads (8 CPU cores detected)
+
+Reading partition model file data/partitions.nex ...
+Reading alignment file data/supermatrix.fasta ... Fasta format detected
+Reading fasta file: done in 0.0253161 secs using 92.14% CPU
+Alignment most likely contains protein sequences
+Alignment has 107 sequences with 7547 columns, 7250 distinct patterns
+7015 parsimony-informative, 106 singleton sites, 426 constant sites
+                                                              Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00166176 secs using 539.7% CPU
+   1  Alcelaphine_gammaherpesvirus_1                                  5.11%    failed      0.00%
+   2  Alcelaphine_gammaherpesvirus_2                                  5.15%    failed      0.00%
+   3  Anatid_alphaherpesvirus_1                                       1.86%    failed      0.01%
+   4  Aotine_betaherpesvirus_1                                        3.70%    failed      0.00%
+   5  Ateline_alphaherpesvirus_1                                      1.89%    failed      0.00%
+   6  Ateline_gammaherpesvirus_3                                     16.19%    failed      0.00%
+   7  Beluga_whale_alphaherpesvirus_1                                 2.45%    failed      0.00%
+   8  Bovine_alphaherpesvirus_2                                       2.50%    failed      0.00%
+   9  Bovine_alphaherpesvirus_5                                       2.32%    failed      0.00%
+  10  Bovine_gammaherpesvirus_4                                       4.48%    failed      0.00%
+  11  Bovine_gammaherpesvirus_6                                       5.19%    failed      0.00%
+  12  Bovine_herpesvirus_type_1.1                                     2.32%    failed      0.00%
+  13  Bubaline_alphaherpesvirus_1                                     2.23%    failed      0.00%
+  14  Cacatuid_alphaherpesvirus_2                                     3.51%    failed      0.10%
+  15  Callitrichine_gammaherpesvirus_3                               13.61%    passed     10.08%
+  16  Canid_alphaherpesvirus_1                                        2.46%    failed      0.00%
+  17  Caprine_alphaherpesvirus_1                                     11.44%    failed      0.00%
+  18  Caviid_betaherpesvirus_2                                        3.64%    failed      0.00%
+  19  Cercopithecine_alphaherpesvirus_2                               2.15%    failed      0.00%
+  20  Cercopithecine_alphaherpesvirus_9                               2.39%    failed      0.00%
+  21  Cercopithecine_betaherpesvirus_5                                4.23%    failed      0.00%
+  22  Cervid_alphaherpesvirus_1                                       2.20%    failed      0.00%
+  23  Cervid_alphaherpesvirus_2                                       2.19%    failed      0.00%
+  24  Cervid_alphaherpesvirus_3                                       2.17%    failed      0.00%
+  25  Chelonid_alphaherpesvirus_5                                    12.67%    failed      0.00%
+  26  Chimpanzee_herpesvirus_strain_105640                            2.15%    failed      0.00%
+  27  Colobine_gammaherpesvirus_1                                     4.47%    failed      0.14%
+  28  Columbid_alphaherpesvirus_1                                     1.95%    failed      0.00%
+  29  Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota    4.39%    failed      1.18%
+  30  Cricetid_gammaherpesvirus_2                                    25.56%    failed      0.00%
+  31  Cynomolgus_cytomegalovirus                                      4.36%    failed      0.00%
+  32  Cynomolgus_macaque_cytomegalovirus_strain_Ottawa               13.17%    failed      0.00%
+  33  Elephant_endotheliotropic_herpesvirus_3A                       16.39%    failed      0.00%
+  34  Elephant_endotheliotropic_herpesvirus_4                        30.83%    failed      0.00%
+  35  Elephant_endotheliotropic_herpesvirus_5                        16.79%    failed      0.00%
+  36  Elephantid_betaherpesvirus_1                                   16.75%    failed      0.00%
+  37  Eptesicus_fuscus_gammaherpesvirus                               3.70%    failed      0.00%
+  38  Equid_alphaherpesvirus_1                                        1.95%    failed      0.01%
+  39  Equid_alphaherpesvirus_3                                        2.01%    failed      0.00%
+  40  Equid_alphaherpesvirus_4                                        2.01%    passed     22.06%
+  41  Equid_alphaherpesvirus_8                                        2.37%    failed      0.10%
+  42  Equid_alphaherpesvirus_9                                        2.35%    failed      0.02%
+  43  Equid_gammaherpesvirus_2                                        4.44%    failed      0.68%
+  44  Equid_gammaherpesvirus_5                                        4.07%    failed      0.00%
+  45  Equid_herpesvirus_6                                             2.01%    failed      0.00%
+  46  Falconid_herpesvirus_1                                          1.95%    failed      0.00%
+  47  Felid_alphaherpesvirus_1                                        1.86%    failed      0.00%
+  48  Felid_gammaherpesvirus_1                                       16.09%    failed      0.00%
+  49  Gallid_alphaherpesvirus_1                                       3.30%    failed      0.00%
+  50  Gallid_alphaherpesvirus_2                                       2.44%    failed      0.00%
+  51  Gallid_alphaherpesvirus_3                                       2.37%    failed      0.67%
+  52  Harp_seal_herpesvirus                                          24.76%    failed      0.00%
+  53  Human_alphaherpesvirus_1                                        2.12%    failed      0.00%
+  54  Human_alphaherpesvirus_2                                        2.12%    failed      0.00%
+  55  Human_alphaherpesvirus_3                                        2.23%    failed      0.00%
+  56  Human_betaherpesvirus_5                                         3.27%    failed      0.00%
+  57  Human_betaherpesvirus_6A                                        5.00%    failed      0.00%
+  58  Human_betaherpesvirus_6B                                        5.00%    failed      0.00%
+  59  Human_betaherpesvirus_7                                        19.73%    failed      0.00%
+  60  Human_gammaherpesvirus_4                                        4.77%    failed      0.00%
+  61  Human_gammaherpesvirus_8                                        4.51%    failed      0.00%
+  62  Human_herpesvirus_4_type_2                                      4.77%    failed      0.00%
+  63  Leporid_alphaherpesvirus_4                                     11.01%    failed      0.00%
+  64  Macaca_arctoides_gammaherpesvirus_1                             4.77%    failed      0.00%
+  65  Macaca_fuscata_rhadinovirus                                    13.67%    failed      0.16%
+  66  Macaca_nemestrina_rhadinovirus_2                                4.80%    failed      0.51%
+  67  Macacine_alphaherpesvirus_1                                     2.03%    failed      0.00%
+  68  Macacine_betaherpesvirus_3                                     13.73%    failed      0.00%
+  69  Macacine_betaherpesvirus_9                                     19.80%    failed      0.00%
+  70  Macacine_gammaherpesvirus_10                                    4.80%    failed      0.00%
+  71  Macacine_gammaherpesvirus_5                                    13.71%    failed      0.43%
+  72  Macropodid_alphaherpesvirus_1                                   2.50%    failed      0.00%
+  73  Macropodid_alphaherpesvirus_2                                   2.42%    failed      0.00%
+  74  Macropodid_alphaherpesvirus_4                                   2.44%    failed      0.00%
+  75  Mandrillus_leucophaeus_cytomegalovirus                         40.82%    failed      0.00%
+  76  Meleagrid_alphaherpesvirus_1                                    2.46%    failed      0.00%
+  77  Miniopterid_betaherpesvirus_1                                   3.86%    failed      0.00%
+  78  Murid_betaherpesvirus_8                                         4.05%    failed      0.00%
+  79  Murid_gammaherpesvirus_4                                       34.37%    failed      0.00%
+  80  Murine_roseolovirus                                            28.63%    failed      0.00%
+  81  Myotis_gammaherpesvirus_8                                      15.57%    failed      0.00%
+  82  Ovine_gammaherpesvirus_2                                        4.90%    failed      0.00%
+  83  Panine_betaherpesvirus_2                                        3.30%    failed      0.00%
+  84  Papiine_alphaherpesvirus_2                                      2.05%    failed      0.00%
+  85  Papio_ursinus_cytomegalovirus                                  27.68%    failed      0.00%
+  86  Phascolarctid_gammaherpesvirus_1                                5.17%    failed      0.00%
+  87  Phocid_alphaherpesvirus_1                                       2.24%    failed      0.00%
+  88  Porcine_lymphotropic_herpesvirus_1                             15.91%    failed      0.00%
+  89  Porcine_lymphotropic_herpesvirus_2                             15.97%    failed      0.00%
+  90  Porcine_lymphotropic_herpesvirus_3                             15.89%    failed      0.00%
+  91  Psittacid_alphaherpesvirus_1                                    2.82%    failed      0.00%
+  92  Psittacid_alphaherpesvirus_5                                    6.98%    failed      0.00%
+  93  Pteropodid_alphaherpesvirus_1                                   3.71%    failed      0.00%
+  94  Pteropodid_alphaherpesvirus_2                                   3.71%    failed      0.00%
+  95  Rat_cytomegalovirus_strain_Maastricht                           7.72%    failed      0.00%
+  96  Retroperitoneal_fibromatosis-associated_herpesvirus             4.65%    passed     32.67%
+  97  Rhinolophus_gammaherpesvirus_1                                  4.40%    failed      0.00%
+  98  Saimiriine_alphaherpesvirus_1                                   2.03%    failed      0.00%
+  99  Saimiriine_betaherpesvirus_4                                    4.05%    failed      0.00%
+ 100  Saimiriine_gammaherpesvirus_2                                   5.21%    failed      0.00%
+ 101  Spheniscid_alphaherpesvirus_1                                   2.08%    failed      0.34%
+ 102  Suid_alphaherpesvirus_1                                         5.27%    failed      0.00%
+ 103  Suid_betaherpesvirus_2                                         14.97%    failed      0.00%
+ 104  Testudinid_alphaherpesvirus_3                                   3.60%    failed      0.00%
+ 105  Tupaiid_betaherpesvirus_1                                       3.48%    failed      0.00%
+ 106  Vombatid_gammaherpesvirus_1                                     5.23%    failed      0.00%
+ 107  Wood_mouse_herpesvirus                                          6.16%    failed      0.00%
+****  TOTAL                                                           7.39%  104 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Loading 8 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	AA	93	691	601	71	LG+F+G4	UL15_terminase1
+2	AA	107	1364	1282	59	LG+F+G4	UL19_capsid
+3	AA	107	847	800	36	LG+F+G4	UL27_gB
+4	AA	106	718	687	23	LG+F+G4	UL28_terminase2
+5	AA	101	1170	1142	23	LG+F+G4	UL29_ssDNA_binding
+6	AA	106	1029	899	115	LG+F+G4	UL30_polymerase
+7	AA	94	912	875	30	LG+F+G4	UL52_primase
+8	AA	107	816	729	69	LG+F+G4	UL5_helicase
+Degree of missing data: 0.038
+Info: multi-threading strategy over partitions
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.318 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 42)...
+
+NOTE: 502 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -699183.074
+Current log-likelihood at step 1: -694271.188
+Current log-likelihood at step 2: -693966.734
+Current log-likelihood at step 3: -693951.194
+Current log-likelihood at step 4: -693951.181
+Partition-specific rates:  0.823 0.738 1.223 1.241 0.928 0.934 1.349 0.939
+Parameters optimization took 3 rounds (25.054 sec)
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000438569 secs using 603.3% CPU
+Computing ML distances took 0.000576 sec (of wall-clock time) 0.002786 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.000593343 secs using 330.3% CPU
+Computing RapidNJ tree took 0.046939 sec (of wall-clock time) 0.101003 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -1194599.580
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 42.520 second
+Computing log-likelihood of 98 initial trees ... 112.978 seconds
+Current best score: -693951.181
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -693751.489
+Current log-likelihood at step 1: -693751.150
+Current log-likelihood at step 2: -693751.137
+Parameters optimization took 1 rounds (7.274 sec)
+
+BETTER TREE FOUND at iteration 1: -693751.137
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -693546.348
+Current log-likelihood at step 1: -693531.559
+Current log-likelihood at step 2: -693531.228
+Current log-likelihood at step 3: -693531.227
+Parameters optimization took 2 rounds (13.742 sec)
+
+BETTER TREE FOUND at iteration 2: -693531.227
+Iteration 10 / LogL: -693538.167 / Time: 0h:7m:12s
+Iteration 20 / LogL: -693533.003 / Time: 0h:11m:48s
+Finish initializing candidate tree set (6)
+Current best tree score: -693531.227 / CPU time: 663.328
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -693531.847 / Time: 0h:16m:40s (0h:41m:23s left)
+Iteration 40 / LogL: -693698.481 / Time: 0h:21m:27s (0h:34m:6s left)
+Iteration 50 / LogL: -693538.323 / Time: 0h:25m:50s (0h:27m:25s left)
+Log-likelihood cutoff on original alignment: -693601.136
+Iteration 60 / LogL: -693531.784 / Time: 0h:30m:19s (0h:21m:34s left)
+Iteration 70 / LogL: -693540.610 / Time: 0h:34m:48s (0h:16m:8s left)
+Iteration 80 / LogL: -693534.609 / Time: 0h:39m:7s (0h:10m:53s left)
+Iteration 90 / LogL: -693537.648 / Time: 0h:43m:26s (0h:5m:51s left)
+Iteration 100 / LogL: -693531.560 / Time: 0h:47m:44s (0h:0m:57s left)
+Log-likelihood cutoff on original alignment: -693601.136
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:49m:19s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -693531.227
+Current log-likelihood at step 1: -693531.227
+Partition-specific rates:  0.817 0.745 1.220 1.236 0.936 0.934 1.346 0.933
+Parameters optimization took 0 rounds (3.549 sec)
+
+Partition information was printed to results/tree/herpesviridae.best_model.nex
+BEST SCORE FOUND : -693531.227
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+8.988 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file results/tree/herpesviridae.splits.nex
+Total tree length: 33.475
+
+Total number of iterations: 103
+CPU time used for tree search: 15600.047 sec (4h:20m:0s)
+Wall-clock time used for tree search: 2914.602 sec (0h:48m:34s)
+Total CPU time used: 15900.243 sec (4h:25m:0s)
+Total wall-clock time used: 2972.641 sec (0h:49m:32s)
+
+Computing bootstrap consensus tree...
+Reading input file results/tree/herpesviridae.splits.nex...
+107 taxa and 232 splits.
+Consensus tree written to results/tree/herpesviridae.contree
+Reading input trees file results/tree/herpesviridae.contree
+Log-likelihood of consensus tree: -693531.389
+
+Analysis results written to: 
+  IQ-TREE report:                results/tree/herpesviridae.iqtree
+  Maximum-likelihood tree:       results/tree/herpesviridae.treefile
+  Likelihood distances:          results/tree/herpesviridae.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          results/tree/herpesviridae.splits.nex
+  Consensus tree:                results/tree/herpesviridae.contree
+  Screen log file:               results/tree/herpesviridae.log
+
+Date and Time: Sat Nov 14 17:42:27 2026

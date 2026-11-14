@@ -1,0 +1,562 @@
+IQ-TREE 2.3.6 built Dec 11 2024
+
+Partition file name: data/partitions.nex
+Input file name: data/supermatrix.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 42
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst. Biol., 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 107 taxa with 8 partitions and 7547 total sites (3.75182% missing data)
+
+  ID	Type	Seq	Site	Unique	Infor	Invar	Const	Name
+   1	AA	93	691	651	601	71	71	UL15_terminase1
+   2	AA	107	1364	1330	1282	59	59	UL19_capsid
+   3	AA	107	847	829	800	36	36	UL27_gB
+   4	AA	106	718	710	687	23	23	UL28_terminase2
+   5	AA	101	1170	1161	1142	23	23	UL29_ssDNA_binding
+   6	AA	106	1029	934	899	115	115	UL30_polymerase
+   7	AA	94	912	897	875	30	30	UL52_primase
+   8	AA	107	816	765	729	69	69	UL5_helicase
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model with separate substitution models and separate rates across sites
+
+  ID  Model           Speed  Parameters
+   1  LG+F+G4        0.8174  LG+F+G4{0.679198}
+   2  LG+F+G4        0.7446  LG+F+G4{1.27499}
+   3  LG+F+G4        1.2200  LG+F+G4{0.980495}
+   4  LG+F+G4        1.2363  LG+F+G4{0.998469}
+   5  LG+F+G4        0.9360  LG+F+G4{1.50944}
+   6  LG+F+G4        0.9340  LG+F+G4{0.731922}
+   7  LG+F+G4        1.3464  LG+F+G4{0.986279}
+   8  LG+F+G4        0.9331  LG+F+G4{0.77798}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -693531.2266 (s.e. 4479.4745)
+Unconstrained log-likelihood (without tree): -51337.1439
+Number of free parameters (#branches + #model parameters): 378
+Akaike information criterion (AIC) score: 1387818.4531
+Corrected Akaike information criterion (AICc) score: 1387858.4258
+Bayesian information criterion (BIC) score: 1390437.5794
+
+Total tree length (sum of branch lengths): 33.4754
+Sum of internal branch lengths: 17.9795 (53.7096% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Alcelaphine_gammaherpesvirus_1' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--Alcelaphine_gammaherpesvirus_1
+|
++--Alcelaphine_gammaherpesvirus_2
+|
+|                                                          +---Anatid_alphaherpesvirus_1
+|                                                       +--| (100/100)
+|                                                       |  |     +**Columbid_alphaherpesvirus_1
+|                                                       |  |  +--| (100/100)
+|                                                       |  |  |  +--Falconid_herpesvirus_1
+|                                                       |  +--| (100/100)
+|                                                       |     |     +--Gallid_alphaherpesvirus_2
+|                                                       |     |  +--| (99.9/100)
+|                                                       |     |  |  +--Gallid_alphaherpesvirus_3
+|                                                       |     +--| (100/100)
+|                                                       |        +--Meleagrid_alphaherpesvirus_1
+|                                                    +--| (100/100)
+|                                                    |  +---Spheniscid_alphaherpesvirus_1
+|                                                 +--| (83.7/87)
+|                                                 |  |           +---Beluga_whale_alphaherpesvirus_1
+|                                                 |  |        +--| (100/100)
+|                                                 |  |        |  |              +--Bovine_alphaherpesvirus_5
+|                                                 |  |        |  |           +--| (100/100)
+|                                                 |  |        |  |           |  +--Bubaline_alphaherpesvirus_1
+|                                                 |  |        |  |        +--| (100/100)
+|                                                 |  |        |  |        |  +--Bovine_herpesvirus_type_1.1
+|                                                 |  |        |  |     +--| (100/100)
+|                                                 |  |        |  |     |  |  +--Cervid_alphaherpesvirus_1
+|                                                 |  |        |  |     |  +--| (100/100)
+|                                                 |  |        |  |     |     +--Cervid_alphaherpesvirus_3
+|                                                 |  |        |  |  +--| (100/100)
+|                                                 |  |        |  |  |  +--Cervid_alphaherpesvirus_2
+|                                                 |  |        |  +--| (100/100)
+|                                                 |  |        |     +--Caprine_alphaherpesvirus_1
+|                                                 |  |     +--| (100/100)
+|                                                 |  |     |  +----Suid_alphaherpesvirus_1
+|                                                 |  |  +--| (100/100)
+|                                                 |  |  |  |        +--Canid_alphaherpesvirus_1
+|                                                 |  |  |  |     +--| (100/100)
+|                                                 |  |  |  |     |  +--Phocid_alphaherpesvirus_1
+|                                                 |  |  |  |  +--| (100/100)
+|                                                 |  |  |  |  |  +--Felid_alphaherpesvirus_1
+|                                                 |  |  |  +--| (100/100)
+|                                                 |  |  |     |        +--Equid_alphaherpesvirus_1
+|                                                 |  |  |     |     +--| (100/100)
+|                                                 |  |  |     |     |  |  +--Equid_alphaherpesvirus_8
+|                                                 |  |  |     |     |  +--| (98.9/100)
+|                                                 |  |  |     |     |     +--Equid_alphaherpesvirus_9
+|                                                 |  |  |     |  +--| (100/100)
+|                                                 |  |  |     |  |  +--Equid_alphaherpesvirus_4
+|                                                 |  |  |     +--| (100/100)
+|                                                 |  |  |        |  +--Equid_alphaherpesvirus_3
+|                                                 |  |  |        +--| (100/100)
+|                                                 |  |  |           +--Equid_herpesvirus_6
+|                                                 |  +--| (100/100)
+|                                                 |     |    +--Cercopithecine_alphaherpesvirus_9
+|                                                 |     +----| (100/100)
+|                                                 |          +--Human_alphaherpesvirus_3
+|                                            +----| (100/100)
+|                                            |    |      +--Ateline_alphaherpesvirus_1
+|                                            |    |   +--| (100/100)
+|                                            |    |   |  +--Saimiriine_alphaherpesvirus_1
+|                                            |    +---| (100/100)
+|                                            |        |     +--Bovine_alphaherpesvirus_2
+|                                            |        |  +--| (100/100)
+|                                            |        |  |  +--Leporid_alphaherpesvirus_4
+|                                            |        +--| (100/100)
+|                                            |           |           +--Cercopithecine_alphaherpesvirus_2
+|                                            |           |        +--| (100/100)
+|                                            |           |        |  +--Papiine_alphaherpesvirus_2
+|                                            |           |     +--| (100/100)
+|                                            |           |     |  +--Macacine_alphaherpesvirus_1
+|                                            |           |  +--| (100/100)
+|                                            |           |  |  |     +--Chimpanzee_herpesvirus_strain_105640
+|                                            |           |  |  |  +--| (100/100)
+|                                            |           |  |  |  |  +--Human_alphaherpesvirus_2
+|                                            |           |  |  +--| (100/100)
+|                                            |           |  |     +--Human_alphaherpesvirus_1
+|                                            |           +--| (100/100)
+|                                            |              |     +--Macropodid_alphaherpesvirus_1
+|                                            |              |  +--| (100/100)
+|                                            |              |  |  |  +--Macropodid_alphaherpesvirus_2
+|                                            |              |  |  +--| (100/100)
+|                                            |              |  |     +--Macropodid_alphaherpesvirus_4
+|                                            |              +--| (99.9/100)
+|                                            |                 |  +--Pteropodid_alphaherpesvirus_1
+|                                            |                 +--| (100/100)
+|                                            |                    +--Pteropodid_alphaherpesvirus_2
+|                                         +--| (100/100)
+|                                         |  |           +--Cacatuid_alphaherpesvirus_2
+|                                         |  |        +--| (100/100)
+|                                         |  |        |  +--Psittacid_alphaherpesvirus_1
+|                                         |  |     +--| (100/100)
+|                                         |  |     |  +----Gallid_alphaherpesvirus_1
+|                                         |  +-----| (100/100)
+|                                         |        +-------Psittacid_alphaherpesvirus_5
+|                            +------------| (100/100)
+|                            |            |  +-----Testudinid_alphaherpesvirus_3
+|                            |            +--| (100/100)
+|                            |               +---------Chelonid_alphaherpesvirus_5
+|                 +----------| (100/100)
+|                 |          |                      +--Aotine_betaherpesvirus_1
+|                 |          |                   +--| (100/100)
+|                 |          |                   |  +--Saimiriine_betaherpesvirus_4
+|                 |          |                +--| (100/100)
+|                 |          |                |  |        +--Cercopithecine_betaherpesvirus_5
+|                 |          |                |  |     +--| (100/100)
+|                 |          |                |  |     |  |  +--Mandrillus_leucophaeus_cytomegalovirus
+|                 |          |                |  |     |  +--| (100/100)
+|                 |          |                |  |     |     +--Papio_ursinus_cytomegalovirus
+|                 |          |                |  |  +--| (100/100)
+|                 |          |                |  |  |  |     +--Cynomolgus_cytomegalovirus
+|                 |          |                |  |  |  |  +--| (100/100)
+|                 |          |                |  |  |  |  |  +--Macacine_betaherpesvirus_3
+|                 |          |                |  |  |  +--| (100/100)
+|                 |          |                |  |  |     +--Cynomolgus_macaque_cytomegalovirus_strain_Ottawa
+|                 |          |                |  +--| (100/100)
+|                 |          |                |     |  +--Human_betaherpesvirus_5
+|                 |          |                |     +--| (100/100)
+|                 |          |                |        +--Panine_betaherpesvirus_2
+|                 |          |             +--| (100/100)
+|                 |          |             |  |     +-----Caviid_betaherpesvirus_2
+|                 |          |             |  |  +--| (54.3/82)
+|                 |          |             |  |  |  +----Tupaiid_betaherpesvirus_1
+|                 |          |             |  +--| (100/100)
+|                 |          |             |     +----Miniopterid_betaherpesvirus_1
+|                 |          |          +--| (100/100)
+|                 |          |          |  |  +--Murid_betaherpesvirus_8
+|                 |          |          |  +--| (100/100)
+|                 |          |          |     +---Rat_cytomegalovirus_strain_Maastricht
+|                 |          |       +--| (100/100)
+|                 |          |       |  |           +--Human_betaherpesvirus_6A
+|                 |          |       |  |        +--| (100/100)
+|                 |          |       |  |        |  +--Human_betaherpesvirus_6B
+|                 |          |       |  |     +--| (100/100)
+|                 |          |       |  |     |  |  +--Human_betaherpesvirus_7
+|                 |          |       |  |     |  +--| (100/100)
+|                 |          |       |  |     |     +--Macacine_betaherpesvirus_9
+|                 |          |       |  |  +--| (100/100)
+|                 |          |       |  |  |  +------Murine_roseolovirus
+|                 |          |       |  +--| (100/100)
+|                 |          |       |     +------Suid_betaherpesvirus_2
+|                 |          +-------| (100/100)
+|                 |                  |             +--Elephant_endotheliotropic_herpesvirus_3A
+|                 |                  |          +--| (100/100)
+|                 |                  |          |  +--Elephant_endotheliotropic_herpesvirus_4
+|                 |                  +----------| (100/100)
+|                 |                             |  +--Elephant_endotheliotropic_herpesvirus_5
+|                 |                             +--| (100/100)
+|                 |                                +--Elephantid_betaherpesvirus_1
+|              +--| (100/100)
+|              |  |          +--Human_gammaherpesvirus_4
+|              |  |       +--| (100/100)
+|              |  |       |  +--Human_herpesvirus_4_type_2
+|              |  |    +--| (100/100)
+|              |  |    |  |  +--Macaca_arctoides_gammaherpesvirus_1
+|              |  |    |  +--| (100/100)
+|              |  |    |     +--Macacine_gammaherpesvirus_10
+|              |  +----| (100/100)
+|              |       +---Callitrichine_gammaherpesvirus_3
+|           +--| (95.4/59)
+|           |  |       +--Phascolarctid_gammaherpesvirus_1
+|           |  +-------| (100/100)
+|           |          +--Vombatid_gammaherpesvirus_1
+|        +--| (100/100)
+|        |  |                +--Ateline_gammaherpesvirus_3
+|        |  |           +----| (100/100)
+|        |  |           |    +--Saimiriine_gammaherpesvirus_2
+|        |  |        +--| (100/100)
+|        |  |        |  |  +----Bovine_gammaherpesvirus_4
+|        |  |        |  +--| (18.5/65)
+|        |  |        |     |           +--Colobine_gammaherpesvirus_1
+|        |  |        |     |        +--| (100/100)
+|        |  |        |     |        |  +--Retroperitoneal_fibromatosis-associated_herpesvirus
+|        |  |        |     |     +--| (100/100)
+|        |  |        |     |     |  +--Human_gammaherpesvirus_8
+|        |  |        |     |  +--| (100/100)
+|        |  |        |     |  |  |   +--Macaca_nemestrina_rhadinovirus_2
+|        |  |        |     |  |  +---| (100/100)
+|        |  |        |     |  |      |  +--Macaca_fuscata_rhadinovirus
+|        |  |        |     |  |      +--| (100/100)
+|        |  |        |     |  |         +--Macacine_gammaherpesvirus_5
+|        |  |        |     +--| (84.8/94)
+|        |  |        |        |           +--Wood_mouse_herpesvirus
+|        |  |        |        |     +-----| (100/100)
+|        |  |        |        |     |     +--Murid_gammaherpesvirus_4
+|        |  |        |        +-----| (100/100)
+|        |  |        |              +-----Cricetid_gammaherpesvirus_2
+|        |  |     +--| (99.7/100)
+|        |  |     |  |           +--Equid_gammaherpesvirus_2
+|        |  |     |  |        +--| (100/100)
+|        |  |     |  |        |  +--Equid_gammaherpesvirus_5
+|        |  |     |  |     +--| (100/100)
+|        |  |     |  |     |  +--Rhinolophus_gammaherpesvirus_1
+|        |  |     |  |  +--| (100/100)
+|        |  |     |  |  |  +--Myotis_gammaherpesvirus_8
+|        |  |     |  +--| (100/100)
+|        |  |     |     |  +--Felid_gammaherpesvirus_1
+|        |  |     |     +--| (100/100)
+|        |  |     |        +--Harp_seal_herpesvirus
+|        |  |  +--| (100/100)
+|        |  |  |  +-------Eptesicus_fuscus_gammaherpesvirus
+|        |  +--| (1.9/22)
+|        |     +-----Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota
+|     +--| (100/100)
+|     |  |     +--Porcine_lymphotropic_herpesvirus_1
+|     |  |  +--| (100/100)
+|     |  |  |  +--Porcine_lymphotropic_herpesvirus_2
+|     |  +--| (100/100)
+|     |     +--Porcine_lymphotropic_herpesvirus_3
+|  +--| (100/100)
+|  |  +--Bovine_gammaherpesvirus_6
++--| (100/100)
+   +--Ovine_gammaherpesvirus_2
+
+Tree in newick format:
+
+(Alcelaphine_gammaherpesvirus_1:0.0581825139,Alcelaphine_gammaherpesvirus_2:0.0593433573,(((((((((((((Anatid_alphaherpesvirus_1:0.3419188297,((Columbid_alphaherpesvirus_1:0.0000026602,Falconid_herpesvirus_1:0.0018473953)100/100:0.2470155763,((Gallid_alphaherpesvirus_2:0.0988765363,Gallid_alphaherpesvirus_3:0.1498894818)99.9/100:0.0534592447,Meleagrid_alphaherpesvirus_1:0.1550275386)100/100:0.2503780447)100/100:0.1725553571)100/100:0.0832953845,Spheniscid_alphaherpesvirus_1:0.3039057447)100/100:0.0972649926,((((Beluga_whale_alphaherpesvirus_1:0.3083925133,(((((Bovine_alphaherpesvirus_5:0.0073370375,Bubaline_alphaherpesvirus_1:0.0094794878)100/100:0.0149396777,Bovine_herpesvirus_type_1.1:0.0263893996)100/100:0.0215231737,(Cervid_alphaherpesvirus_1:0.0078453784,Cervid_alphaherpesvirus_3:0.0123904201)100/100:0.0191427442)100/100:0.0207982697,Cervid_alphaherpesvirus_2:0.0577425760)100/100:0.0471217981,Caprine_alphaherpesvirus_1:0.0703405253)100/100:0.2226285406)100/100:0.1004582114,Suid_alphaherpesvirus_1:0.3524146012)100/100:0.0703728683,(((Canid_alphaherpesvirus_1:0.1114183806,Phocid_alphaherpesvirus_1:0.0670004478)100/100:0.1863407954,Felid_alphaherpesvirus_1:0.2134014799)100/100:0.1343295995,(((Equid_alphaherpesvirus_1:0.0084112807,(Equid_alphaherpesvirus_8:0.0114402947,Equid_alphaherpesvirus_9:0.0059448888)98.9/100:0.0036339517)100/100:0.0272745630,Equid_alphaherpesvirus_4:0.0578837181)100/100:0.1204162623,(Equid_alphaherpesvirus_3:0.0411956001,Equid_herpesvirus_6:0.0556502813)100/100:0.0789627004)100/100:0.1330838355)100/100:0.0778125584)100/100:0.0690479982,(Cercopithecine_alphaherpesvirus_9:0.2685890690,Human_alphaherpesvirus_3:0.1887524794)100/100:0.3819400063)100/100:0.0746701981)83.7/87:0.0608158806,((Ateline_alphaherpesvirus_1:0.1199458592,Saimiriine_alphaherpesvirus_1:0.1112017728)100/100:0.1193266289,((Bovine_alphaherpesvirus_2:0.1294025895,Leporid_alphaherpesvirus_4:0.1947370344)100/100:0.1423019241,((((Cercopithecine_alphaherpesvirus_2:0.0200102174,Papiine_alphaherpesvirus_2:0.0145743333)100/100:0.0168691896,Macacine_alphaherpesvirus_1:0.0237988750)100/100:0.0884401452,((Chimpanzee_herpesvirus_strain_105640:0.0139542884,Human_alphaherpesvirus_2:0.0121909197)100/100:0.0383796841,Human_alphaherpesvirus_1:0.0428493581)100/100:0.0711608283)100/100:0.0436700815,((Macropodid_alphaherpesvirus_1:0.0617736886,(Macropodid_alphaherpesvirus_2:0.0165871046,Macropodid_alphaherpesvirus_4:0.0151013876)100/100:0.0735773012)100/100:0.2759429185,(Pteropodid_alphaherpesvirus_1:0.0274401554,Pteropodid_alphaherpesvirus_2:0.0285830225)100/100:0.1131464312)99.9/100:0.0524660169)100/100:0.0598617028)100/100:0.0782052069)100/100:0.2897404727)100/100:0.3865204737,(((Cacatuid_alphaherpesvirus_2:0.2215590422,Psittacid_alphaherpesvirus_1:0.1959178043)100/100:0.2104444721,Gallid_alphaherpesvirus_1:0.3499682325)100/100:0.1895139193,Psittacid_alphaherpesvirus_5:0.5677356696)100/100:0.4495313921)100/100:0.2500727290,(Testudinid_alphaherpesvirus_3:0.4730883669,Chelonid_alphaherpesvirus_5:0.7021933196)100/100:0.2528487102)100/100:0.9507339667,((((((Aotine_betaherpesvirus_1:0.1384434561,Saimiriine_betaherpesvirus_4:0.1261863300)100/100:0.1472420963,(((Cercopithecine_betaherpesvirus_5:0.0389383255,(Mandrillus_leucophaeus_cytomegalovirus:0.0280804412,Papio_ursinus_cytomegalovirus:0.0353937273)100/100:0.0408515822)100/100:0.0253989572,((Cynomolgus_cytomegalovirus:0.0084976381,Macacine_betaherpesvirus_3:0.0136609509)100/100:0.0109694957,Cynomolgus_macaque_cytomegalovirus_strain_Ottawa:0.0138096677)100/100:0.0547884974)100/100:0.1111321445,(Human_betaherpesvirus_5:0.0878147147,Panine_betaherpesvirus_2:0.0877913717)100/100:0.1107435669)100/100:0.1397622776)100/100:0.2503065728,((Caviid_betaherpesvirus_2:0.4786632008,Tupaiid_betaherpesvirus_1:0.4043579265)54.3/82:0.0607462506,Miniopterid_betaherpesvirus_1:0.3586095621)100/100:0.0682168119)100/100:0.0833608694,(Murid_betaherpesvirus_8:0.2397561049,Rat_cytomegalovirus_strain_Maastricht:0.3470939422)100/100:0.2459688353)100/100:0.2222924843,((((Human_betaherpesvirus_6A:0.0105401284,Human_betaherpesvirus_6B:0.0082997343)100/100:0.2351835072,(Human_betaherpesvirus_7:0.1446782733,Macacine_betaherpesvirus_9:0.1549357574)100/100:0.1826973328)100/100:0.1886396931,Murine_roseolovirus:0.5251962131)100/100:0.1484964338,Suid_betaherpesvirus_2:0.5132499661)100/100:0.1962429954)100/100:0.2589392912,((Elephant_endotheliotropic_herpesvirus_3A:0.0306331800,Elephant_endotheliotropic_herpesvirus_4:0.0311760139)100/100:0.2042573365,(Elephant_endotheliotropic_herpesvirus_5:0.0865158735,Elephantid_betaherpesvirus_1:0.0872527026)100/100:0.1335411623)100/100:0.8124959249)100/100:0.6218048275)100/100:0.7805507263,(((Human_gammaherpesvirus_4:0.0011147270,Human_herpesvirus_4_type_2:0.0011834485)100/100:0.0413266434,(Macaca_arctoides_gammaherpesvirus_1:0.0118656674,Macacine_gammaherpesvirus_10:0.0136770742)100/100:0.0328074954)100/100:0.2386657947,Callitrichine_gammaherpesvirus_3:0.2834760666)100/100:0.4143249287)100/100:0.1503633435,(Phascolarctid_gammaherpesvirus_1:0.2017720947,Vombatid_gammaherpesvirus_1:0.1882470068)100/100:0.6001169226)95.4/59:0.0650166241,(((((Ateline_gammaherpesvirus_3:0.0889885766,Saimiriine_gammaherpesvirus_2:0.0735835791)100/100:0.3530549190,(Bovine_gammaherpesvirus_4:0.4143779542,((((Colobine_gammaherpesvirus_1:0.1558065279,Retroperitoneal_fibromatosis-associated_herpesvirus:0.1533948871)100/100:0.1148040924,Human_gammaherpesvirus_8:0.1963105095)100/100:0.1681196085,(Macaca_nemestrina_rhadinovirus_2:0.0393410531,(Macaca_fuscata_rhadinovirus:0.0123385571,Macacine_gammaherpesvirus_5:0.0109491660)100/100:0.0329726457)100/100:0.2965239850)100/100:0.1578034643,((Wood_mouse_herpesvirus:0.0305891874,Murid_gammaherpesvirus_4:0.0424360561)100/100:0.4299960317,Cricetid_gammaherpesvirus_2:0.4642840530)100/100:0.4554133755)84.8/94:0.0539120406)18.5/65:0.0419796377)100/100:0.0744023821,((((Equid_gammaherpesvirus_2:0.1115608774,Equid_gammaherpesvirus_5:0.1383439268)100/100:0.2220823000,Rhinolophus_gammaherpesvirus_1:0.2162087559)100/100:0.0779529537,Myotis_gammaherpesvirus_8:0.2459848654)100/100:0.0961058343,(Felid_gammaherpesvirus_1:0.2352320349,Harp_seal_herpesvirus:0.1595491770)100/100:0.1974351651)100/100:0.1429485587)99.7/100:0.0500791861,Eptesicus_fuscus_gammaherpesvirus:0.5759767369)100/100:0.0919841321,Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota:0.4773245926)1.9/22:0.0354814847)100/100:0.2611473734,((Porcine_lymphotropic_herpesvirus_1:0.0239822966,Porcine_lymphotropic_herpesvirus_2:0.0251922669)100/100:0.1193275549,Porcine_lymphotropic_herpesvirus_3:0.1195550887)100/100:0.2294109877)100/100:0.1206848001,Bovine_gammaherpesvirus_6:0.2429574918)100/100:0.2214900560,Ovine_gammaherpesvirus_2:0.1470912651)100/100:0.1350718741);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -693531.389006
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Alcelaphine_gammaherpesvirus_1
+|
++--Alcelaphine_gammaherpesvirus_2
+|
+|                                                             +---Anatid_alphaherpesvirus_1
+|                                                          +--| (100)
+|                                                          |  |     +--Columbid_alphaherpesvirus_1
+|                                                          |  |  +--| (100)
+|                                                          |  |  |  +--Falconid_herpesvirus_1
+|                                                          |  +--| (100)
+|                                                          |     |     +--Gallid_alphaherpesvirus_2
+|                                                          |     |  +--| (100)
+|                                                          |     |  |  +--Gallid_alphaherpesvirus_3
+|                                                          |     +--| (100)
+|                                                          |        +--Meleagrid_alphaherpesvirus_1
+|                                                       +--| (100)
+|                                                       |  +---Spheniscid_alphaherpesvirus_1
+|                                                    +--| (87)
+|                                                    |  |           +---Beluga_whale_alphaherpesvirus_1
+|                                                    |  |        +--| (100)
+|                                                    |  |        |  |              +--Bovine_alphaherpesvirus_5
+|                                                    |  |        |  |           +--| (100)
+|                                                    |  |        |  |           |  +--Bubaline_alphaherpesvirus_1
+|                                                    |  |        |  |        +--| (100)
+|                                                    |  |        |  |        |  +--Bovine_herpesvirus_type_1.1
+|                                                    |  |        |  |     +--| (100)
+|                                                    |  |        |  |     |  |  +--Cervid_alphaherpesvirus_1
+|                                                    |  |        |  |     |  +--| (100)
+|                                                    |  |        |  |     |     +--Cervid_alphaherpesvirus_3
+|                                                    |  |        |  |  +--| (100)
+|                                                    |  |        |  |  |  +--Cervid_alphaherpesvirus_2
+|                                                    |  |        |  +--| (100)
+|                                                    |  |        |     +--Caprine_alphaherpesvirus_1
+|                                                    |  |     +--| (100)
+|                                                    |  |     |  +---Suid_alphaherpesvirus_1
+|                                                    |  |  +--| (100)
+|                                                    |  |  |  |        +--Canid_alphaherpesvirus_1
+|                                                    |  |  |  |     +--| (100)
+|                                                    |  |  |  |     |  +--Phocid_alphaherpesvirus_1
+|                                                    |  |  |  |  +--| (100)
+|                                                    |  |  |  |  |  +--Felid_alphaherpesvirus_1
+|                                                    |  |  |  +--| (100)
+|                                                    |  |  |     |        +--Equid_alphaherpesvirus_1
+|                                                    |  |  |     |     +--| (100)
+|                                                    |  |  |     |     |  |  +--Equid_alphaherpesvirus_8
+|                                                    |  |  |     |     |  +--| (100)
+|                                                    |  |  |     |     |     +--Equid_alphaherpesvirus_9
+|                                                    |  |  |     |  +--| (100)
+|                                                    |  |  |     |  |  +--Equid_alphaherpesvirus_4
+|                                                    |  |  |     +--| (100)
+|                                                    |  |  |        |  +--Equid_alphaherpesvirus_3
+|                                                    |  |  |        +--| (100)
+|                                                    |  |  |           +--Equid_herpesvirus_6
+|                                                    |  +--| (100)
+|                                                    |     |    +--Cercopithecine_alphaherpesvirus_9
+|                                                    |     +----| (100)
+|                                                    |          +--Human_alphaherpesvirus_3
+|                                               +----| (100)
+|                                               |    |      +--Ateline_alphaherpesvirus_1
+|                                               |    |   +--| (100)
+|                                               |    |   |  +--Saimiriine_alphaherpesvirus_1
+|                                               |    +---| (100)
+|                                               |        |     +--Bovine_alphaherpesvirus_2
+|                                               |        |  +--| (100)
+|                                               |        |  |  +--Leporid_alphaherpesvirus_4
+|                                               |        +--| (100)
+|                                               |           |           +--Cercopithecine_alphaherpesvirus_2
+|                                               |           |        +--| (100)
+|                                               |           |        |  +--Papiine_alphaherpesvirus_2
+|                                               |           |     +--| (100)
+|                                               |           |     |  +--Macacine_alphaherpesvirus_1
+|                                               |           |  +--| (100)
+|                                               |           |  |  |     +--Chimpanzee_herpesvirus_strain_105640
+|                                               |           |  |  |  +--| (100)
+|                                               |           |  |  |  |  +--Human_alphaherpesvirus_2
+|                                               |           |  |  +--| (100)
+|                                               |           |  |     +--Human_alphaherpesvirus_1
+|                                               |           +--| (100)
+|                                               |              |     +--Macropodid_alphaherpesvirus_1
+|                                               |              |  +--| (100)
+|                                               |              |  |  |  +--Macropodid_alphaherpesvirus_2
+|                                               |              |  |  +--| (100)
+|                                               |              |  |     +--Macropodid_alphaherpesvirus_4
+|                                               |              +--| (100)
+|                                               |                 |  +--Pteropodid_alphaherpesvirus_1
+|                                               |                 +--| (100)
+|                                               |                    +--Pteropodid_alphaherpesvirus_2
+|                                            +--| (100)
+|                                            |  |           +--Cacatuid_alphaherpesvirus_2
+|                                            |  |        +--| (100)
+|                                            |  |        |  +--Psittacid_alphaherpesvirus_1
+|                                            |  |     +--| (100)
+|                                            |  |     |  +---Gallid_alphaherpesvirus_1
+|                                            |  +-----| (100)
+|                                            |        +-------Psittacid_alphaherpesvirus_5
+|                               +------------| (100)
+|                               |            |  +-----Testudinid_alphaherpesvirus_3
+|                               |            +--| (100)
+|                               |               +--------Chelonid_alphaherpesvirus_5
+|                    +----------| (100)
+|                    |          |                      +--Aotine_betaherpesvirus_1
+|                    |          |                   +--| (100)
+|                    |          |                   |  +--Saimiriine_betaherpesvirus_4
+|                    |          |                +--| (100)
+|                    |          |                |  |        +--Cercopithecine_betaherpesvirus_5
+|                    |          |                |  |     +--| (100)
+|                    |          |                |  |     |  |  +--Mandrillus_leucophaeus_cytomegalovirus
+|                    |          |                |  |     |  +--| (100)
+|                    |          |                |  |     |     +--Papio_ursinus_cytomegalovirus
+|                    |          |                |  |  +--| (100)
+|                    |          |                |  |  |  |     +--Cynomolgus_cytomegalovirus
+|                    |          |                |  |  |  |  +--| (100)
+|                    |          |                |  |  |  |  |  +--Macacine_betaherpesvirus_3
+|                    |          |                |  |  |  +--| (100)
+|                    |          |                |  |  |     +--Cynomolgus_macaque_cytomegalovirus_strain_Ottawa
+|                    |          |                |  +--| (100)
+|                    |          |                |     |  +--Human_betaherpesvirus_5
+|                    |          |                |     +--| (100)
+|                    |          |                |        +--Panine_betaherpesvirus_2
+|                    |          |             +--| (100)
+|                    |          |             |  |     +-----Caviid_betaherpesvirus_2
+|                    |          |             |  |  +--| (82)
+|                    |          |             |  |  |  +----Tupaiid_betaherpesvirus_1
+|                    |          |             |  +--| (100)
+|                    |          |             |     +----Miniopterid_betaherpesvirus_1
+|                    |          |          +--| (100)
+|                    |          |          |  |  +--Murid_betaherpesvirus_8
+|                    |          |          |  +--| (100)
+|                    |          |          |     +---Rat_cytomegalovirus_strain_Maastricht
+|                    |          |       +--| (100)
+|                    |          |       |  |           +--Human_betaherpesvirus_6A
+|                    |          |       |  |        +--| (100)
+|                    |          |       |  |        |  +--Human_betaherpesvirus_6B
+|                    |          |       |  |     +--| (100)
+|                    |          |       |  |     |  |  +--Human_betaherpesvirus_7
+|                    |          |       |  |     |  +--| (100)
+|                    |          |       |  |     |     +--Macacine_betaherpesvirus_9
+|                    |          |       |  |  +--| (100)
+|                    |          |       |  |  |  +------Murine_roseolovirus
+|                    |          |       |  +--| (100)
+|                    |          |       |     +------Suid_betaherpesvirus_2
+|                    |          +-------| (100)
+|                    |                  |             +--Elephant_endotheliotropic_herpesvirus_3A
+|                    |                  |          +--| (100)
+|                    |                  |          |  +--Elephant_endotheliotropic_herpesvirus_4
+|                    |                  +----------| (100)
+|                    |                             |  +--Elephant_endotheliotropic_herpesvirus_5
+|                    |                             +--| (100)
+|                    |                                +--Elephantid_betaherpesvirus_1
+|                 +--| (100)
+|                 |  |          +--Human_gammaherpesvirus_4
+|                 |  |       +--| (100)
+|                 |  |       |  +--Human_herpesvirus_4_type_2
+|                 |  |    +--| (100)
+|                 |  |    |  |  +--Macaca_arctoides_gammaherpesvirus_1
+|                 |  |    |  +--| (100)
+|                 |  |    |     +--Macacine_gammaherpesvirus_10
+|                 |  +----| (100)
+|                 |       +---Callitrichine_gammaherpesvirus_3
+|              +--| (59)
+|              |  |       +--Phascolarctid_gammaherpesvirus_1
+|              |  +-------| (100)
+|              |          +--Vombatid_gammaherpesvirus_1
+|           +--| (23)
+|           |  |            +--Ateline_gammaherpesvirus_3
+|           |  |        +---| (100)
+|           |  |        |   +--Saimiriine_gammaherpesvirus_2
+|           |  |     +--| (100)
+|           |  |     |  |  +----Bovine_gammaherpesvirus_4
+|           |  |     |  +--| (65)
+|           |  |     |     |           +--Colobine_gammaherpesvirus_1
+|           |  |     |     |        +--| (100)
+|           |  |     |     |        |  +--Retroperitoneal_fibromatosis-associated_herpesvirus
+|           |  |     |     |     +--| (100)
+|           |  |     |     |     |  +--Human_gammaherpesvirus_8
+|           |  |     |     |  +--| (100)
+|           |  |     |     |  |  |   +--Macaca_nemestrina_rhadinovirus_2
+|           |  |     |     |  |  +---| (100)
+|           |  |     |     |  |      |  +--Macaca_fuscata_rhadinovirus
+|           |  |     |     |  |      +--| (100)
+|           |  |     |     |  |         +--Macacine_gammaherpesvirus_5
+|           |  |     |     +--| (94)
+|           |  |     |        |           +--Wood_mouse_herpesvirus
+|           |  |     |        |     +-----| (100)
+|           |  |     |        |     |     +--Murid_gammaherpesvirus_4
+|           |  |     |        +-----| (100)
+|           |  |     |              +-----Cricetid_gammaherpesvirus_2
+|           |  |  +--| (100)
+|           |  |  |  |           +--Equid_gammaherpesvirus_2
+|           |  |  |  |        +--| (100)
+|           |  |  |  |        |  +--Equid_gammaherpesvirus_5
+|           |  |  |  |     +--| (100)
+|           |  |  |  |     |  +--Rhinolophus_gammaherpesvirus_1
+|           |  |  |  |  +--| (100)
+|           |  |  |  |  |  +--Myotis_gammaherpesvirus_8
+|           |  |  |  +--| (100)
+|           |  |  |     |  +--Felid_gammaherpesvirus_1
+|           |  |  |     +--| (100)
+|           |  |  |        +--Harp_seal_herpesvirus
+|           |  +--| (100)
+|           |     +-------Eptesicus_fuscus_gammaherpesvirus
+|        +--| (100)
+|        |  +-----Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota
+|     +--| (100)
+|     |  |     +--Porcine_lymphotropic_herpesvirus_1
+|     |  |  +--| (100)
+|     |  |  |  +--Porcine_lymphotropic_herpesvirus_2
+|     |  +--| (100)
+|     |     +--Porcine_lymphotropic_herpesvirus_3
+|  +--| (100)
+|  |  +--Bovine_gammaherpesvirus_6
++--| (100)
+   +--Ovine_gammaherpesvirus_2
+
+
+Consensus tree in newick format: 
+
+(Alcelaphine_gammaherpesvirus_1:0.0582340539,Alcelaphine_gammaherpesvirus_2:0.0593192801,((((((((((((((Anatid_alphaherpesvirus_1:0.3420553765,((Columbid_alphaherpesvirus_1:0.0000024947,Falconid_herpesvirus_1:0.0018478671)100:0.2470968695,((Gallid_alphaherpesvirus_2:0.0989062535,Gallid_alphaherpesvirus_3:0.1499349842)100:0.0534664354,Meleagrid_alphaherpesvirus_1:0.1550876567)100:0.2504784534)100:0.1726480072)100:0.0832946407,Spheniscid_alphaherpesvirus_1:0.3040226230)100:0.0973523770,((((Beluga_whale_alphaherpesvirus_1:0.3085039404,(((((Bovine_alphaherpesvirus_5:0.0073398565,Bubaline_alphaherpesvirus_1:0.0094828209)100:0.0149454229,Bovine_herpesvirus_type_1.1:0.0263995817)100:0.0215309582,(Cervid_alphaherpesvirus_1:0.0078491430,Cervid_alphaherpesvirus_3:0.0123947736)100:0.0191503088)100:0.0208070126,Cervid_alphaherpesvirus_2:0.0577638198)100:0.0471334335,Caprine_alphaherpesvirus_1:0.0703797419)100:0.2227070497)100:0.1004877152,Suid_alphaherpesvirus_1:0.3525480943)100:0.0704021631,(((Canid_alphaherpesvirus_1:0.1114583819,Phocid_alphaherpesvirus_1:0.0670228314)100:0.1864175604,Felid_alphaherpesvirus_1:0.2134818649)100:0.1343403088,(((Equid_alphaherpesvirus_1:0.0084138059,(Equid_alphaherpesvirus_8:0.0114439399,Equid_alphaherpesvirus_9:0.0059474894)100:0.0036348207)100:0.0272842099,Equid_alphaherpesvirus_4:0.0579028067)100:0.1204721322,(Equid_alphaherpesvirus_3:0.0412084518,Equid_herpesvirus_6:0.0556728233)100:0.0789836786)100:0.1331477914)100:0.0778471373)100:0.0690620030,(Cercopithecine_alphaherpesvirus_9:0.2686676917,Human_alphaherpesvirus_3:0.1888245425)100:0.3821244728)100:0.0746776636)87:0.0608484449,((Ateline_alphaherpesvirus_1:0.1199832567,Saimiriine_alphaherpesvirus_1:0.1112372672)100:0.1193513889,((Bovine_alphaherpesvirus_2:0.1294511190,Leporid_alphaherpesvirus_4:0.1947985501)100:0.1423440463,((((Cercopithecine_alphaherpesvirus_2:0.0200163291,Papiine_alphaherpesvirus_2:0.0145788590)100:0.0168745558,Macacine_alphaherpesvirus_1:0.0238049057)100:0.0884704023,((Chimpanzee_herpesvirus_strain_105640:0.0139582755,Human_alphaherpesvirus_2:0.0121944741)100:0.0383904902,Human_alphaherpesvirus_1:0.0428621468)100:0.0711841828)100:0.0436738162,((Macropodid_alphaherpesvirus_1:0.0617878666,(Macropodid_alphaherpesvirus_2:0.0165903643,Macropodid_alphaherpesvirus_4:0.0151061198)100:0.0736043305)100:0.2760342996,(Pteropodid_alphaherpesvirus_1:0.0274422676,Pteropodid_alphaherpesvirus_2:0.0285976381)100:0.1131911133)100:0.0524821519)100:0.0598939571)100:0.0782358089)100:0.2898079835)100:0.3869068819,(((Cacatuid_alphaherpesvirus_2:0.2216019937,Psittacid_alphaherpesvirus_1:0.1960113487)100:0.2104746943,Gallid_alphaherpesvirus_1:0.3501456467)100:0.1895795984,Psittacid_alphaherpesvirus_5:0.5679555069)100:0.4493978939)100:0.2500134988,(Testudinid_alphaherpesvirus_3:0.4733210294,Chelonid_alphaherpesvirus_5:0.7024361467)100:0.2529566885)100:0.9510494726,((((((Aotine_betaherpesvirus_1:0.1384944803,Saimiriine_betaherpesvirus_4:0.1262266349)100:0.1472800353,(((Cercopithecine_betaherpesvirus_5:0.0389501498,(Mandrillus_leucophaeus_cytomegalovirus:0.0280934539,Papio_ursinus_cytomegalovirus:0.0354111516)100:0.0408727839)100:0.0254080919,((Cynomolgus_cytomegalovirus:0.0085015231,Macacine_betaherpesvirus_3:0.0136657632)100:0.0109735686,Cynomolgus_macaque_cytomegalovirus_strain_Ottawa:0.0138150212)100:0.0548081868)100:0.1111671387,(Human_betaherpesvirus_5:0.0878418577,Panine_betaherpesvirus_2:0.0878221112)100:0.1107861571)100:0.1398275224)100:0.2504069605,((Caviid_betaherpesvirus_2:0.4788703802,Tupaiid_betaherpesvirus_1:0.4044493958)82:0.0607578824,Miniopterid_betaherpesvirus_1:0.3587332835)100:0.0682568226)100:0.0834525506,(Murid_betaherpesvirus_8:0.2398258462,Rat_cytomegalovirus_strain_Maastricht:0.3471978257)100:0.2459780380)100:0.2225326801,((((Human_betaherpesvirus_6A:0.0105434373,Human_betaherpesvirus_6B:0.0083025274)100:0.2352316258,(Human_betaherpesvirus_7:0.1447310551,Macacine_betaherpesvirus_9:0.1550027755)100:0.1828142564)100:0.1887174116,Murine_roseolovirus:0.5254524025)100:0.1486070891,Suid_betaherpesvirus_2:0.5133722107)100:0.1961681109)100:0.2592305713,((Elephant_endotheliotropic_herpesvirus_3A:0.0306486850,Elephant_endotheliotropic_herpesvirus_4:0.0311817609)100:0.2043513104,(Elephant_endotheliotropic_herpesvirus_5:0.0865291667,Elephantid_betaherpesvirus_1:0.0872841773)100:0.1335277358)100:0.8125384490)100:0.6226163765)100:0.7819300526,(((Human_gammaherpesvirus_4:0.0011140620,Human_herpesvirus_4_type_2:0.0011856601)100:0.0413801258,(Macaca_arctoides_gammaherpesvirus_1:0.0118659937,Macacine_gammaherpesvirus_10:0.0136836763)100:0.0327691809)100:0.2373701360,Callitrichine_gammaherpesvirus_3:0.2848602432)100:0.4149670146)100:0.1518108397,(Phascolarctid_gammaherpesvirus_1:0.2007513809,Vombatid_gammaherpesvirus_1:0.1893585050)100:0.6020071213)59:0.0712364517,((((Ateline_gammaherpesvirus_3:0.0890132814,Saimiriine_gammaherpesvirus_2:0.0736218449)100:0.3529403301,(Bovine_gammaherpesvirus_4:0.4151715312,((((Colobine_gammaherpesvirus_1:0.1558369188,Retroperitoneal_fibromatosis-associated_herpesvirus:0.1534805488)100:0.1147414975,Human_gammaherpesvirus_8:0.1964642746)100:0.1682157282,(Macaca_nemestrina_rhadinovirus_2:0.0393439170,(Macaca_fuscata_rhadinovirus:0.0123438723,Macacine_gammaherpesvirus_5:0.0109528918)100:0.0329911564)100:0.2966436336)100:0.1585846357,((Wood_mouse_herpesvirus:0.0306013393,Murid_gammaherpesvirus_4:0.0424509414)100:0.4303802700,Cricetid_gammaherpesvirus_2:0.4642774635)100:0.4550763200)94:0.0532919986)65:0.0421872577)100:0.0747776149,((((Equid_gammaherpesvirus_2:0.1116648774,Equid_gammaherpesvirus_5:0.1383344868)100:0.2221189718,Rhinolophus_gammaherpesvirus_1:0.2163096559)100:0.0780866179,Myotis_gammaherpesvirus_8:0.2458239561)100:0.0962150879,(Felid_gammaherpesvirus_1:0.2349770814,Harp_seal_herpesvirus:0.1598547312)100:0.1971315610)100:0.1424388558)100:0.0509410124,Eptesicus_fuscus_gammaherpesvirus:0.5753484906)100:0.0912316456)23:0.0349332267,Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota:0.4682408444)100:0.2630468216,((Porcine_lymphotropic_herpesvirus_1:0.0239810107,Porcine_lymphotropic_herpesvirus_2:0.0252099287)100:0.1194800903,Porcine_lymphotropic_herpesvirus_3:0.1195440716)100:0.2292057823)100:0.1209670026,Bovine_gammaherpesvirus_6:0.2424756061)100:0.2217665761,Ovine_gammaherpesvirus_2:0.1469026696)100:0.1353587989);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t results/tree/herpesviridae.treefile -p results/tree/herpesviridae.best_model.nex
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data/supermatrix.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data/supermatrix.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Sat Nov 14 17:42:27 2026
+Total CPU time used: 15900.24347 seconds (4h:25m:0s)
+Total wall-clock time used: 2985.3879 seconds (0h:49m:45s)
+

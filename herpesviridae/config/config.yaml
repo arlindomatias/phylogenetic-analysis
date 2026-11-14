@@ -1,0 +1,77 @@
+# Parameters for the Orthoherpesviridae phylogenetic taxonomy analysis.
+# Paths are relative to the project root (viral_phylogeny/).
+
+dataset: herpesviridae-refseq
+title: "Phylogenetic taxonomy of Orthoherpesviridae (NCBI RefSeq)"
+
+# ---------------------------------------------------------------------------
+# Data source: NCBI Virus, via the `datasets` CLI.
+# ---------------------------------------------------------------------------
+download:
+  taxon: Herpesviridae        # family; NCBI keeps the old name as a synonym of Orthoherpesviridae
+  refseq_only: true           # one reference genome per virus: a curated, non-redundant sample
+  include: genome,protein
+
+data_dir: data
+ncbi_dir: data/ncbi           # raw download (never edit by hand)
+results_dir: results          # tables, alignments statistics, tree files
+plots_dir: plots              # PDF + PNG figures
+reports_dir: reports          # report.html and versions.txt
+
+seed: 42                      # IQ-TREE random seed (reproducible bootstrap)
+
+# ---------------------------------------------------------------------------
+# Marker genes. Core herpesvirus genes, conserved across the three subfamilies,
+# taken from the HSV-1 reference genome (NC_001806.2, strain 17) as BLAST queries.
+# Orthologues in every other genome are found by homology, not by annotation text,
+# because the RefSeq protein names are inconsistent across the family.
+#
+# UL26 (capsid maturation protease) is deliberately absent: it is a protease-scaffold fusion
+# whose homologues align with the HSV-1 query only over the protease domain (~36% of the query),
+# so it fails the coverage floor in most beta- and gammaherpesviruses.
+# ---------------------------------------------------------------------------
+markers:
+  UL5_helicase:        YP_009137079.1   # helicase-primase helicase subunit
+  UL15_terminase1:     YP_009137089.1   # DNA packaging terminase subunit 1
+  UL19_capsid:         YP_009137093.1   # major capsid protein
+  UL27_gB:             YP_009137102.1   # envelope glycoprotein B
+  UL28_terminase2:     YP_009137103.1   # DNA packaging terminase subunit 2
+  UL29_ssDNA_binding:  YP_009137104.1   # single-stranded DNA-binding protein
+  UL30_polymerase:     YP_009137105.1   # DNA polymerase catalytic subunit
+  UL52_primase:        YP_009137128.1   # helicase-primase primase subunit
+
+homology:
+  evalue: 1e-10               # DIAMOND blastp maximum E-value
+  min_identity: 20            # percent identity floor for an accepted orthologue
+  min_query_coverage: 50      # percent of the query length the hit must cover
+  sensitivity: very-sensitive # DIAMOND mode; needed for distant subfamilies
+
+alignment:
+  gap_threshold: 0.5          # trimAl -gt: keep columns with >= 50% of taxa not gapped
+
+supermatrix:
+  min_markers: 5              # a genome enters the tree with at least n of the markers
+
+tree:
+  model: LG+F+G4              # fixed substitution model per partition (fast and standard)
+  ufboot: 1000                # ultrafast bootstrap replicates
+  alrt: 1000                  # SH-aLRT replicates
+  threads: 6
+
+# ---------------------------------------------------------------------------
+# Presentation. The five human herpesviruses with the strongest published link to
+# cognitive decline / dementia in ageing are highlighted in the tree and report.
+# ---------------------------------------------------------------------------
+highlight:
+  "Human alphaherpesvirus 1": "HSV-1 — Alzheimer's disease hypothesis"
+  "Human alphaherpesvirus 3": "VZV — zoster and dementia risk"
+  "Human betaherpesvirus 5": "HCMV — immunosenescence, cognitive decline"
+  "Human gammaherpesvirus 4": "EBV — cognitive decline, MS comorbidity"
+  "Human betaherpesvirus 6A": "HHV-6A — detected in AD brain tissue"
+
+colors:
+  Alphaherpesvirinae: "#CC0000"
+  Betaherpesvirinae: "#3399FF"
+  Gammaherpesvirinae: "#009933"
+  unclassified: "#777777"
+  highlight: "#B8860B"

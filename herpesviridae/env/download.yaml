@@ -1,0 +1,8 @@
+# Genome download from NCBI Virus (scripts/download.sh)
+name: download
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - ncbi-datasets-cli=18
+  - unzip

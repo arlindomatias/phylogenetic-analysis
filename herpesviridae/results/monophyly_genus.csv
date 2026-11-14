@@ -1,0 +1,17 @@
+rank,taxon,n_taxa,monophyletic,support_alrt,support_ufboot,smallest_clade_size,n_intruders,intruders
+genus,Bossavirus,1,single taxon,,,1,0,
+genus,Cytomegalovirus,10,yes,100.0,100.0,10,0,
+genus,Iltovirus,4,yes,100.0,100.0,4,0,
+genus,Lymphocryptovirus,5,yes,100.0,100.0,5,0,
+genus,Macavirus,7,yes,100.0,100.0,7,0,
+genus,Manticavirus,2,yes,100.0,100.0,2,0,
+genus,Mardivirus,7,yes,100.0,100.0,7,0,
+genus,Muromegalovirus,2,yes,100.0,100.0,2,0,
+genus,Percavirus,5,no,100.0,100.0,6,1,Myotis_gammaherpesvirus_8
+genus,Proboscivirus,4,yes,100.0,100.0,4,0,
+genus,Quwivirus,3,yes,100.0,100.0,3,0,
+genus,Rhadinovirus,12,yes,100.0,100.0,12,0,
+genus,Roseolovirus,6,yes,100.0,100.0,6,0,
+genus,Scutavirus,2,yes,100.0,100.0,2,0,
+genus,Simplexvirus,15,yes,100.0,100.0,15,0,
+genus,Varicellovirus,20,yes,100.0,100.0,20,0,

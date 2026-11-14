@@ -1,0 +1,20 @@
+#nexus
+begin sets;
+  charset UL15_terminase1 = AA, 1-691;
+  charset UL19_capsid = AA, 692-2055;
+  charset UL27_gB = AA, 2056-2902;
+  charset UL28_terminase2 = AA, 2903-3620;
+  charset UL29_ssDNA_binding = AA, 3621-4790;
+  charset UL30_polymerase = AA, 4791-5819;
+  charset UL52_primase = AA, 5820-6731;
+  charset UL5_helicase = AA, 6732-7547;
+  charpartition mymodels =
+    LG+F+G4{0.679198}: UL15_terminase1{24.9511},
+    LG+F+G4{1.27499}: UL19_capsid{24.9255},
+    LG+F+G4{0.980495}: UL27_gB{40.8386},
+    LG+F+G4{0.998469}: UL28_terminase2{41.3342},
+    LG+F+G4{1.50944}: UL29_ssDNA_binding{30.2635},
+    LG+F+G4{0.731922}: UL30_polymerase{31.2403},
+    LG+F+G4{0.986279}: UL52_primase{40.5781},
+    LG+F+G4{0.77798}: UL5_helicase{31.2368};
+end;

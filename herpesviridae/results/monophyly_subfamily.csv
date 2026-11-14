@@ -1,0 +1,4 @@
+rank,taxon,n_taxa,monophyletic,support_alrt,support_ufboot,smallest_clade_size,n_intruders,intruders
+subfamily,Alphaherpesvirinae,48,yes,100.0,100.0,48,0,
+subfamily,Betaherpesvirinae,25,yes,100.0,100.0,25,0,
+subfamily,Gammaherpesvirinae,34,yes,100.0,100.0,34,0,

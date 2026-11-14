@@ -1,0 +1,11 @@
+label,organism,accession,subfamily,genus,species,genome_length,cognitive_decline_note,closest_relative_in_tree
+Human_alphaherpesvirus_1,Human alphaherpesvirus 1,NC_001806.2,Alphaherpesvirinae,Simplexvirus,Simplexvirus humanalpha1,152222,HSV-1 — Alzheimer's disease hypothesis,Chimpanzee_herpesvirus_strain_105640; Human_alphaherpesvirus_2
+Human_alphaherpesvirus_2,Human alphaherpesvirus 2,NC_001798.2,Alphaherpesvirinae,Simplexvirus,Simplexvirus humanalpha2,154675,,Chimpanzee_herpesvirus_strain_105640
+Human_alphaherpesvirus_3,Human alphaherpesvirus 3,NC_001348.1,Alphaherpesvirinae,Varicellovirus,Varicellovirus humanalpha3,124884,VZV — zoster and dementia risk,Cercopithecine_alphaherpesvirus_9
+Human_betaherpesvirus_5,Human betaherpesvirus 5,NC_006273.2,Betaherpesvirinae,Cytomegalovirus,Cytomegalovirus humanbeta5,235646,"HCMV — immunosenescence, cognitive decline",Panine_betaherpesvirus_2
+Human_betaherpesvirus_6A,Human betaherpesvirus 6A,NC_001664.4,Betaherpesvirinae,Roseolovirus,Roseolovirus humanbeta6a,159378,HHV-6A — detected in AD brain tissue,Human_betaherpesvirus_6B
+Human_betaherpesvirus_6B,Human betaherpesvirus 6B,NC_000898.1,Betaherpesvirinae,Roseolovirus,Roseolovirus humanbeta6b,162114,,Human_betaherpesvirus_6A
+Human_betaherpesvirus_7,Human betaherpesvirus 7,NC_001716.2,Betaherpesvirinae,Roseolovirus,Roseolovirus humanbeta7,153080,,Macacine_betaherpesvirus_9
+Human_gammaherpesvirus_4,Human gammaherpesvirus 4,NC_007605.1,Gammaherpesvirinae,Lymphocryptovirus,Lymphocryptovirus humangamma4,171823,"EBV — cognitive decline, MS comorbidity",Human_herpesvirus_4_type_2
+Human_gammaherpesvirus_8,Human gammaherpesvirus 8,NC_009333.1,Gammaherpesvirinae,Rhadinovirus,Rhadinovirus humangamma8,137969,,Colobine_gammaherpesvirus_1; Retroperitoneal_fibromatosis-associated_herpesvirus
+Human_herpesvirus_4_type_2,Human herpesvirus 4 type 2,NC_009334.1,Gammaherpesvirinae,Lymphocryptovirus,Lymphocryptovirus humangamma4,172764,,Human_gammaherpesvirus_4

@@ -1,0 +1,7 @@
+# Maximum likelihood phylogeny
+name: tree
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - iqtree=2.3

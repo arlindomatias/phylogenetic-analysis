@@ -1,0 +1,8 @@
+# Multiple sequence alignment and trimming
+name: align
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - mafft=7.526
+  - trimal=1.5

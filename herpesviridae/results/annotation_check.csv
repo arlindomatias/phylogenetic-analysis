@@ -1,0 +1,9 @@
+marker,query_product_name,n_taxa_with_that_exact_name,pct_taxa
+UL15_terminase1,DNA packaging terminase subunit 1,56,45.9
+UL19_capsid,major capsid protein,78,63.9
+UL27_gB,envelope glycoprotein B,60,49.2
+UL28_terminase2,DNA packaging terminase subunit 2,58,47.5
+UL29_ssDNA_binding,single-stranded DNA-binding protein,53,43.4
+UL30_polymerase,DNA polymerase catalytic subunit,61,50.0
+UL52_primase,helicase-primase primase subunit,54,44.3
+UL5_helicase,helicase-primase helicase subunit,58,47.5

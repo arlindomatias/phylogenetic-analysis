@@ -1,0 +1,354 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=107;
+TAXLABELS
+[1] 'Alcelaphine_gammaherpesvirus_1'
+[2] 'Alcelaphine_gammaherpesvirus_2'
+[3] 'Anatid_alphaherpesvirus_1'
+[4] 'Aotine_betaherpesvirus_1'
+[5] 'Ateline_alphaherpesvirus_1'
+[6] 'Ateline_gammaherpesvirus_3'
+[7] 'Beluga_whale_alphaherpesvirus_1'
+[8] 'Bovine_alphaherpesvirus_2'
+[9] 'Bovine_alphaherpesvirus_5'
+[10] 'Bovine_gammaherpesvirus_4'
+[11] 'Bovine_gammaherpesvirus_6'
+[12] 'Bovine_herpesvirus_type_1.1'
+[13] 'Bubaline_alphaherpesvirus_1'
+[14] 'Cacatuid_alphaherpesvirus_2'
+[15] 'Canid_alphaherpesvirus_1'
+[16] 'Caviid_betaherpesvirus_2'
+[17] 'Cercopithecine_alphaherpesvirus_2'
+[18] 'Cercopithecine_alphaherpesvirus_9'
+[19] 'Cercopithecine_betaherpesvirus_5'
+[20] 'Cervid_alphaherpesvirus_1'
+[21] 'Cervid_alphaherpesvirus_2'
+[22] 'Cervid_alphaherpesvirus_3'
+[23] 'Chimpanzee_herpesvirus_strain_105640'
+[24] 'Colobine_gammaherpesvirus_1'
+[25] 'Columbid_alphaherpesvirus_1'
+[26] 'Common_bottlenose_dolphin_gammaherpesvirus_1_strain_Sarasota'
+[27] 'Cynomolgus_cytomegalovirus'
+[28] 'Elephant_endotheliotropic_herpesvirus_3A'
+[29] 'Elephant_endotheliotropic_herpesvirus_4'
+[30] 'Elephant_endotheliotropic_herpesvirus_5'
+[31] 'Elephantid_betaherpesvirus_1'
+[32] 'Eptesicus_fuscus_gammaherpesvirus'
+[33] 'Equid_alphaherpesvirus_1'
+[34] 'Equid_alphaherpesvirus_3'
+[35] 'Equid_alphaherpesvirus_4'
+[36] 'Equid_alphaherpesvirus_8'
+[37] 'Equid_alphaherpesvirus_9'
+[38] 'Equid_gammaherpesvirus_2'
+[39] 'Equid_gammaherpesvirus_5'
+[40] 'Equid_herpesvirus_6'
+[41] 'Falconid_herpesvirus_1'
+[42] 'Felid_alphaherpesvirus_1'
+[43] 'Felid_gammaherpesvirus_1'
+[44] 'Gallid_alphaherpesvirus_1'
+[45] 'Gallid_alphaherpesvirus_2'
+[46] 'Gallid_alphaherpesvirus_3'
+[47] 'Human_alphaherpesvirus_1'
+[48] 'Human_alphaherpesvirus_2'
+[49] 'Human_alphaherpesvirus_3'
+[50] 'Human_betaherpesvirus_5'
+[51] 'Human_betaherpesvirus_6A'
+[52] 'Human_betaherpesvirus_6B'
+[53] 'Human_betaherpesvirus_7'
+[54] 'Human_gammaherpesvirus_4'
+[55] 'Human_gammaherpesvirus_8'
+[56] 'Human_herpesvirus_4_type_2'
+[57] 'Leporid_alphaherpesvirus_4'
+[58] 'Macaca_arctoides_gammaherpesvirus_1'
+[59] 'Macaca_nemestrina_rhadinovirus_2'
+[60] 'Macacine_alphaherpesvirus_1'
+[61] 'Macacine_betaherpesvirus_9'
+[62] 'Macacine_gammaherpesvirus_10'
+[63] 'Macropodid_alphaherpesvirus_1'
+[64] 'Macropodid_alphaherpesvirus_2'
+[65] 'Macropodid_alphaherpesvirus_4'
+[66] 'Meleagrid_alphaherpesvirus_1'
+[67] 'Miniopterid_betaherpesvirus_1'
+[68] 'Murid_betaherpesvirus_8'
+[69] 'Myotis_gammaherpesvirus_8'
+[70] 'Ovine_gammaherpesvirus_2'
+[71] 'Panine_betaherpesvirus_2'
+[72] 'Papiine_alphaherpesvirus_2'
+[73] 'Phascolarctid_gammaherpesvirus_1'
+[74] 'Phocid_alphaherpesvirus_1'
+[75] 'Porcine_lymphotropic_herpesvirus_1'
+[76] 'Porcine_lymphotropic_herpesvirus_2'
+[77] 'Porcine_lymphotropic_herpesvirus_3'
+[78] 'Psittacid_alphaherpesvirus_1'
+[79] 'Psittacid_alphaherpesvirus_5'
+[80] 'Pteropodid_alphaherpesvirus_1'
+[81] 'Pteropodid_alphaherpesvirus_2'
+[82] 'Rat_cytomegalovirus_strain_Maastricht'
+[83] 'Retroperitoneal_fibromatosis-associated_herpesvirus'
+[84] 'Rhinolophus_gammaherpesvirus_1'
+[85] 'Saimiriine_alphaherpesvirus_1'
+[86] 'Saimiriine_betaherpesvirus_4'
+[87] 'Saimiriine_gammaherpesvirus_2'
+[88] 'Spheniscid_alphaherpesvirus_1'
+[89] 'Suid_alphaherpesvirus_1'
+[90] 'Testudinid_alphaherpesvirus_3'
+[91] 'Tupaiid_betaherpesvirus_1'
+[92] 'Vombatid_gammaherpesvirus_1'
+[93] 'Wood_mouse_herpesvirus'
+[94] 'Callitrichine_gammaherpesvirus_3'
+[95] 'Caprine_alphaherpesvirus_1'
+[96] 'Chelonid_alphaherpesvirus_5'
+[97] 'Cricetid_gammaherpesvirus_2'
+[98] 'Cynomolgus_macaque_cytomegalovirus_strain_Ottawa'
+[99] 'Harp_seal_herpesvirus'
+[100] 'Macaca_fuscata_rhadinovirus'
+[101] 'Macacine_betaherpesvirus_3'
+[102] 'Macacine_gammaherpesvirus_5'
+[103] 'Mandrillus_leucophaeus_cytomegalovirus'
+[104] 'Murid_gammaherpesvirus_4'
+[105] 'Murine_roseolovirus'
+[106] 'Papio_ursinus_cytomegalovirus'
+[107] 'Suid_betaherpesvirus_2'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=107 nsplits=232;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 25,
+	100	 41,
+	100	 25 41,
+	100	 45,
+	100	 46,
+	100	 45 46,
+	100	 66,
+	100	 45 46 66,
+	100	 25 41 45 46 66,
+	100	 3 25 41 45 46 66,
+	100	 88,
+	100	 3 25 41 45 46 66 88,
+	100	 7,
+	100	 9,
+	100	 13,
+	100	 9 13,
+	100	 12,
+	100	 9 12 13,
+	100	 20,
+	100	 22,
+	100	 20 22,
+	100	 9 12 13 20 22,
+	100	 21,
+	100	 9 12 13 20 21 22,
+	100	 95,
+	100	 9 12 13 20 21 22 95,
+	100	 7 9 12 13 20 21 22 95,
+	100	 89,
+	100	 7 9 12 13 20 21 22 89 95,
+	100	 15,
+	100	 74,
+	100	 15 74,
+	100	 42,
+	100	 15 42 74,
+	100	 33,
+	100	 36,
+	100	 37,
+	100	 36 37,
+	100	 33 36 37,
+	100	 35,
+	100	 33 35 36 37,
+	100	 34,
+	100	 40,
+	100	 34 40,
+	100	 33 34 35 36 37 40,
+	100	 15 33 34 35 36 37 40 42 74,
+	100	 7 9 12 13 15 20 21 22 33 34 35 36 37 40 42 74 89 95,
+	100	 18,
+	100	 49,
+	100	 18 49,
+	100	 7 9 12 13 15 18 20 21 22 33 34 35 36 37 40 42 49 74 89 95,
+	87	 3 7 9 12 13 15 18 20 21 22 25 33 34 35 36 37 40 41 42 45 46 49 66 74 88 89 95,
+	100	 5,
+	100	 85,
+	100	 5 85,
+	100	 8,
+	100	 57,
+	100	 8 57,
+	100	 17,
+	100	 72,
+	100	 17 72,
+	100	 60,
+	100	 17 60 72,
+	100	 23,
+	100	 48,
+	100	 23 48,
+	100	 47,
+	100	 23 47 48,
+	100	 17 23 47 48 60 72,
+	100	 63,
+	100	 64,
+	100	 65,
+	100	 64 65,
+	100	 63 64 65,
+	100	 80,
+	100	 81,
+	100	 80 81,
+	100	 63 64 65 80 81,
+	100	 17 23 47 48 60 63 64 65 72 80 81,
+	100	 8 17 23 47 48 57 60 63 64 65 72 80 81,
+	100	 5 8 17 23 47 48 57 60 63 64 65 72 80 81 85,
+	100	 3 5 7 8 9 12 13 15 17 18 20 21 22 23 25 33 34 35 36 37 40 41 42 45 46 47 48 49 57 60 63 64 65 66 72 74 80 81 85 88 89 95,
+	100	 14,
+	100	 78,
+	100	 14 78,
+	100	 44,
+	100	 14 44 78,
+	100	 79,
+	100	 14 44 78 79,
+	100	 3 5 7 8 9 12 13 14 15 17 18 20 21 22 23 25 33 34 35 36 37 40 41 42 44 45 46 47 48 49 57 60 63 64 65 66 72 74 78 79 80 81 85 88 89 95,
+	100	 90,
+	100	 96,
+	100	 90 96,
+	100	 3 5 7 8 9 12 13 14 15 17 18 20 21 22 23 25 33 34 35 36 37 40 41 42 44 45 46 47 48 49 57 60 63 64 65 66 72 74 78 79 80 81 85 88 89 90 95 96,
+	100	 4,
+	100	 86,
+	100	 4 86,
+	100	 19,
+	100	 103,
+	100	 106,
+	100	 103 106,
+	100	 19 103 106,
+	100	 27,
+	100	 101,
+	100	 27 101,
+	100	 98,
+	100	 27 98 101,
+	100	 19 27 98 101 103 106,
+	100	 50,
+	100	 71,
+	100	 50 71,
+	100	 19 27 50 71 98 101 103 106,
+	100	 4 19 27 50 71 86 98 101 103 106,
+	100	 16,
+	100	 91,
+	82	 16 91,
+	100	 67,
+	100	 16 67 91,
+	100	 4 16 19 27 50 67 71 86 91 98 101 103 106,
+	100	 68,
+	100	 82,
+	100	 68 82,
+	100	 4 16 19 27 50 67 68 71 82 86 91 98 101 103 106,
+	100	 51,
+	100	 52,
+	100	 51 52,
+	100	 53,
+	100	 61,
+	100	 53 61,
+	100	 51 52 53 61,
+	100	 105,
+	100	 51 52 53 61 105,
+	100	 107,
+	100	 51 52 53 61 105 107,
+	100	 4 16 19 27 50 51 52 53 61 67 68 71 82 86 91 98 101 103 105 106 107,
+	100	 28,
+	100	 29,
+	100	 28 29,
+	100	 30,
+	100	 31,
+	100	 30 31,
+	100	 28 29 30 31,
+	100	 4 16 19 27 28 29 30 31 50 51 52 53 61 67 68 71 82 86 91 98 101 103 105 106 107,
+	100	 1 2 6 10 11 24 26 32 38 39 43 54 55 56 58 59 62 69 70 73 75 76 77 83 84 87 92 93 94 97 99 100 102 104,
+	100	 54,
+	100	 56,
+	100	 54 56,
+	100	 58,
+	100	 62,
+	100	 58 62,
+	100	 54 56 58 62,
+	100	 94,
+	100	 54 56 58 62 94,
+	100	 1 2 6 10 11 24 26 32 38 39 43 55 59 69 70 73 75 76 77 83 84 87 92 93 97 99 100 102 104,
+	100	 26,
+	37	 1 2 6 10 11 24 32 38 39 43 55 59 69 70 73 75 76 77 83 84 87 92 93 97 99 100 102 104,
+	100	 6,
+	100	 87,
+	100	 6 87,
+	100	 10,
+	33	 6 10 87,
+	100	 24,
+	100	 83,
+	100	 24 83,
+	100	 55,
+	100	 24 55 83,
+	100	 59,
+	100	 100,
+	100	 102,
+	100	 100 102,
+	100	 59 100 102,
+	100	 24 55 59 83 100 102,
+	100	 93,
+	100	 104,
+	100	 93 104,
+	100	 97,
+	100	 93 97 104,
+	94	 24 55 59 83 93 97 100 102 104,
+	100	 6 10 24 55 59 83 87 93 97 100 102 104,
+	100	 38,
+	100	 39,
+	100	 38 39,
+	100	 84,
+	100	 38 39 84,
+	100	 69,
+	100	 38 39 69 84,
+	100	 43,
+	100	 99,
+	100	 43 99,
+	100	 38 39 43 69 84 99,
+	100	 6 10 24 38 39 43 55 59 69 83 84 87 93 97 99 100 102 104,
+	100	 32,
+	100	 6 10 24 32 38 39 43 55 59 69 83 84 87 93 97 99 100 102 104,
+	36	 1 2 11 70 73 75 76 77 92,
+	100	 73,
+	100	 92,
+	100	 73 92,
+	100	 1 2 11 70 75 76 77,
+	100	 75,
+	100	 76,
+	100	 75 76,
+	100	 77,
+	100	 75 76 77,
+	100	 1 2 11 70,
+	100	 11,
+	100	 1 2 70,
+	100	 70,
+	100	 1 2,
+	100	 1,
+	1	 6 24 55 59 83 87 93 97 100 102 104,
+	13	 5 7 8 9 12 13 15 17 18 20 21 22 23 33 34 35 36 37 40 42 47 48 49 57 60 63 64 65 72 74 80 81 85 89 95,
+	65	 10 24 55 59 83 93 97 100 102 104,
+	59	 1 2 6 10 11 24 26 32 38 39 43 55 59 69 70 75 76 77 83 84 87 93 97 99 100 102 104,
+	23	 1 2 11 26 70 75 76 77,
+	15	 1 2 6 10 11 24 32 38 39 43 55 59 69 70 75 76 77 83 84 87 93 97 99 100 102 104,
+	22	 6 10 24 26 32 38 39 43 55 59 69 83 84 87 93 97 99 100 102 104,
+	18	 16 67,
+	5	 10 93 97 104,
+	4	 26 73 92,
+	4	 6 10 24 26 32 38 39 43 55 59 69 73 83 84 87 92 93 97 99 100 102 104,
+	0	 1 2 11 26 70 73 75 76 77 92,
+	1	 10 24 55 59 83 100 102,
+	0	 6 10 24 55 59 83 87 100 102,
+	0	 6 10 24 32 55 59 83 87 93 97 100 102 104,
+	0	 67 91,
+	0	 1 2 6 10 11 24 26 32 38 39 43 54 55 56 58 59 62 69 70 75 76 77 83 84 87 93 94 97 99 100 102 104,
+	0	 26 54 56 58 62 94,
+	0	 6 10 24 26 32 38 39 43 54 55 56 58 59 62 69 83 84 87 93 94 97 99 100 102 104,
+	0	 6 10 24 32 38 39 43 55 59 69 73 83 84 87 92 93 97 99 100 102 104,
+	0	 6 87 93 97 104,
+;
+END; [Splits]
+
