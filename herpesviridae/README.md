@@ -1,4 +1,4 @@
-# viral_phylogeny
+# herpesviridae
 
 Phylogenetic taxonomy of the herpesvirus family **Orthoherpesviridae** (formerly *Herpesviridae*) from
 NCBI RefSeq genomes, with a focus on the five human herpesviruses that carry a published association
@@ -42,7 +42,7 @@ The only input is the network: `scripts/download.sh` fetches the data from NCBI 
 ## Layout
 
 ```
-viral_phylogeny/
+herpesviridae/
 ├── Snakefile                 # download → … → report (target of rule all)
 ├── config/config.yaml        # taxon, marker genes, thresholds, model, highlighted viruses, colors
 ├── env/                      # one conda environment per rule (--use-conda)
